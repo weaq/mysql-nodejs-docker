@@ -13,4 +13,7 @@ docker-compose down -v
 
 # Stop and remove all containers, networks, and all images
 docker-compose down --rmi all
+
+# Clear image
+docker system prune -a
 ```
