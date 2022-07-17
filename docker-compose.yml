@@ -13,8 +13,8 @@ services:
       - 8081:80
     environment:
       - PMA_ARBITRARY=1
-  web:
-    build: ./app
+  api:
+    build: ./api
     environment:
       MYSQL_DATABASE: test
       MYSQL_USER: root
@@ -25,4 +25,3 @@ services:
     depends_on:
       - db
     restart: on-failure
-  
