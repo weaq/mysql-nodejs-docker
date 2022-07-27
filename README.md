@@ -17,8 +17,7 @@ docker-compose down --rmi all
 # Clear image
 docker system prune -a
 
-# Stop / remove all of Docker containers
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
+# Stop and remove all of Docker containers
+docker ps -aq | xargs docker stop | xargs docker rm
 
 ```
